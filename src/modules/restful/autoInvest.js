@@ -180,7 +180,7 @@ const AutoInvest = superclass => class extends superclass {
    * @param {number} [options.recvWindow] - The value cannot be greater than 60000
    */
   querySubscriptionTransactionHistory (options = {}) {
-    return this.publicRequest(
+    return this.signRequest(
       'GET',
       '/sapi/v1/lending/auto-invest/history/list',
       options
